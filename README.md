@@ -11,6 +11,10 @@ It bundles two things:
 
 The server itself is a hosted service operated by [Manu Labs, LLC](https://www.patchmcp.com/terms); its source is not part of this repository.
 
+## Built on Grok
+
+Patch MCP runs on xAI end to end. The voice on the call is Grok's [Voice Agent API](https://docs.x.ai/developers/model-capabilities/audio/voice-agent): real-time speech-to-speech over WebSocket, so there is no separate speech-to-text or text-to-speech hop, and the transcript of both sides comes out of the same session. A Grok text model screens every objective before the call is dialed and extracts the structured resolution once it ends. Telephony, recordings and the verification texts are carried by Telnyx.
+
 ## Installation
 
 **Grok Bot** – open **Plugins → Marketplace**, search for **Patch MCP** and add it. Or add this repository directly as a plugin from GitHub: `https://github.com/manu-labs/patch-mcp-grok-plugin`.
@@ -79,6 +83,7 @@ For reviewers and anyone deciding whether to install:
 - **Credentials.** None to configure. On first use the client completes OAuth 2.1 with PKCE and dynamic client registration against `www.patchmcp.com` and stores the resulting bearer token; the token is scoped to `calls` and is only ever sent to that host. No environment variables are read; no files on your machine are touched.
 - **Local execution.** None. There are no hooks, scripts, binaries or `stdio` servers in this plugin; the MCP server is remote.
 - **What leaves your machine.** Only the tool arguments Grok sends (`to`, `objective`, `context`, `callee_name`, `user_name`, `max_duration_minutes`). Patch MCP uses them to place the call and stores the resulting transcript, resolution and recording on your account so you can review them.
+- **Sub-processors.** Behind `www.patchmcp.com`, call content is handled by xAI (the Grok voice agent and text models) and Telnyx (telephony and recording storage); the full provider table, with what each one receives, is in the Privacy Policy under [Who we share it with](https://www.patchmcp.com/privacy#share). Nothing is used to train models.
 - **Policies.** [Terms of Use](https://www.patchmcp.com/terms) · [Privacy Policy](https://www.patchmcp.com/privacy) · contact [leko@manulabs.xyz](mailto:leko@manulabs.xyz).
 
 ## Removal

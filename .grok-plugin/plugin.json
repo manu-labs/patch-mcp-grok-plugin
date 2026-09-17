@@ -1,7 +1,7 @@
 {
   "name": "patch-mcp",
   "version": "1.0.0",
-  "description": "Give Grok a phone line. Places real phone calls from the user's own verified number through the hosted Patch MCP server: an AI voice agent makes the call and comes back with the outcome, the transcript and a recording.",
+  "description": "Give Grok a phone line. Places real phone calls from the user's own verified number through the hosted Patch MCP server: an AI voice agent makes the call and comes back with the outcome, the transcript and a recording. Built on Grok: xAI's Voice Agent API speaks on the call, and a Grok text model screens objectives and writes up the result.",
   "author": {
     "name": "Manu Labs, LLC",
     "url": "https://github.com/manu-labs"
