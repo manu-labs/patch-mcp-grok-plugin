@@ -83,7 +83,7 @@ For reviewers and anyone deciding whether to install:
 - **Credentials.** None to configure. On first use the client completes OAuth 2.1 with PKCE and dynamic client registration against `www.patchmcp.com` and stores the resulting bearer token; the token is scoped to `calls` and is only ever sent to that host. No environment variables are read; no files on your machine are touched.
 - **Local execution.** None. There are no hooks, scripts, binaries or `stdio` servers in this plugin; the MCP server is remote.
 - **What leaves your machine.** Only the tool arguments Grok sends (`to`, `objective`, `context`, `callee_name`, `user_name`, `max_duration_minutes`). Patch MCP uses them to place the call and stores the resulting transcript, resolution and recording on your account so you can review them.
-- **Sub-processors.** Behind `www.patchmcp.com`, call content is handled by xAI (the Grok voice agent and text models) and Telnyx (telephony and recording storage); the full provider table, with what each one receives, is in the Privacy Policy under [Who we share it with](https://www.patchmcp.com/privacy#share). Nothing is used to train models.
+- **Sub-processors.** Behind `www.patchmcp.com`, call content is handled by xAI (the Grok voice agent and text models) and Telnyx (telephony and recording storage); the full provider table, with what each one receives, is in the Privacy Policy under [Who we share it with](https://www.patchmcp.com/privacy#share). Manu Labs never uses call content to train models, and the AI provider handles it only to conduct and review your calls.
 - **Policies.** [Terms of Use](https://www.patchmcp.com/terms) · [Privacy Policy](https://www.patchmcp.com/privacy) · contact [leko@manulabs.xyz](mailto:leko@manulabs.xyz).
 
 ## Removal
