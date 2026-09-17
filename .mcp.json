@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "patch-mcp": {
+      "type": "http",
+      "url": "https://www.patchmcp.com/mcp",
+      "note": "Hosted Patch MCP server (Streamable HTTP, OAuth 2.1 with PKCE). On first connection the agent opens www.patchmcp.com in the browser: the user enters the phone number calls should come from and confirms the code texted to it. No API key to paste. Tools: place_call, get_call, list_calls, end_call. Only endpoint contacted: https://www.patchmcp.com. Terms: https://www.patchmcp.com/terms"
+    }
+  }
+}
