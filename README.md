@@ -67,7 +67,9 @@ Text me the reservation confirmation and address.
 Send that menu picture to my phone. I'll text back what I want.
 ```
 
-When you reply from your verified phone, Grok reads it with `receive_texts`. Replies remain pending until the agent acknowledges handling them; clients must poll because the server does not push incoming texts.
+When you reply from your verified phone, Grok reads your inbox resource or uses `receive_texts`. Replies remain pending until the agent acknowledges handling them. Clients that support MCP resource subscriptions can subscribe to `patch://texts/inbox` and read it when an update arrives; tool-only clients use `receive_texts` while waiting for a reply. Whether a notification wakes Grok depends on the client.
+
+The preferred inbox flow is to subscribe, read immediately, and read again on each update or reconnect. Notifications are hints; unread texts remain in the database until explicitly acknowledged with `receive_texts`. If subscription setup returns `subscription_unavailable`, retry after recovery or use the tool fallback. Do not leave an indefinite polling loop running after the task ends.
 
 ### Tools
 
