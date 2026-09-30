@@ -15,7 +15,7 @@ The server itself is a hosted service operated by [Manu Labs, LLC](https://www.p
 
 ## Built on Grok
 
-Patch MCP runs on xAI end to end. The voice on the call is Grok's [Voice Agent API](https://docs.x.ai/developers/model-capabilities/audio/voice-agent): real-time speech-to-speech over WebSocket, so there is no separate speech-to-text or text-to-speech hop, and the transcript of both sides comes out of the same session. A Grok text model screens every objective before the call is dialed and extracts the structured resolution once it ends. Telephony, recordings and the verification texts are carried by Telnyx.
+Grok text models screen each call objective and extract the structured resolution. The service's configured voice engine uses xAI's Voice Agent API or ElevenLabs for the live conversation. Telnyx carries calls, verification codes, SMS and picture messages.
 
 ## Installation
 

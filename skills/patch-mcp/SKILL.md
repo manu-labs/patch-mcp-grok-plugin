@@ -4,7 +4,7 @@ description: |
   Make phone calls on the user's behalf, text their own verified phone, and read their replies with Patch MCP. Use for errands such as bookings and questions, call summaries or pictures sent to the user, and incoming texts. Tools: get_phone_number, place_call, get_call, list_calls, end_call, send_text, get_text, list_texts, receive_texts.
 ---
 
-# Patch MCP: phone calls for Grok
+# Patch MCP: calls and texts for Grok
 
 Patch MCP places outbound calls **from the user's own verified number**. A real-time voice agent makes the call, opens by saying it is an AI calling on behalf of the user and that the call is recorded, handles phone menus and hold queues, and hangs up when the objective is met. You get back a structured resolution, the transcript and a recording.
 
