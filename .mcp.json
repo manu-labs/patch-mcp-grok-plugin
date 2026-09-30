@@ -3,7 +3,7 @@
     "patch-mcp": {
       "type": "http",
       "url": "https://www.patchmcp.com/mcp",
-      "note": "Hosted Patch MCP server (Streamable HTTP, OAuth 2.1 with PKCE). On first connection the agent opens www.patchmcp.com in the browser: the user enters the phone number calls should come from and confirms the code texted to it. No API key to paste. Tools: place_call, get_call, list_calls, end_call. Only endpoint contacted: https://www.patchmcp.com. Terms: https://www.patchmcp.com/terms"
+      "note": "Hosted Patch MCP server (Streamable HTTP, OAuth 2.1 with PKCE). On first connection the user verifies their US/Canadian phone number by text code and approves the connection; optional SMS consent is chosen separately in the UI. No API key to paste. Tools: get_phone_number, place_call, get_call, list_calls, end_call, send_text, get_text, list_texts, receive_texts. Texts and pictures go only to the authenticated user's own verified number, from the service messaging number. Only endpoint contacted by the plugin: https://www.patchmcp.com. Terms: https://www.patchmcp.com/terms"
     }
   }
 }
