@@ -3,7 +3,7 @@
     "patch-mcp": {
       "type": "http",
       "url": "https://www.patchmcp.com/mcp",
-      "note": "Hosted Patch MCP server (Streamable HTTP, OAuth 2.1 with PKCE). On first connection the user verifies their US/Canadian phone number by text code and approves the connection; optional SMS consent is chosen separately in the UI. No API key to paste. Tools: get_phone_number, place_call, get_call, list_calls, end_call, send_text, get_text, list_texts, receive_texts. Texts and pictures go only to the authenticated user's own verified number, from the service messaging number. Only endpoint contacted by the plugin: https://www.patchmcp.com. Terms: https://www.patchmcp.com/terms Prefer resources/subscribe and resources/read for patch://texts/inbox when supported; read after subscribing, each update and reconnect, then acknowledge handled batches with receive_texts. Tool-only clients can long-poll receive_texts while a reply is expected."
+      "note": "Hosted Patch MCP server (Streamable HTTP, OAuth 2.1 with PKCE). The user verifies an eligible phone number by SMS code or automated call and approves the connection. No API key to configure. Tools: get_phone_number, estimate_call, place_call, get_call, list_calls, end_call, set_call_visibility. Calls use the authenticated user's verified caller ID. Texting, picture messages and text event subscriptions are coming soon and unavailable; do not start a text listener. Only endpoint contacted by the plugin: https://www.patchmcp.com. Terms: https://www.patchmcp.com/terms"
     }
   }
 }
